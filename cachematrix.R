@@ -6,8 +6,7 @@
 
 
 ## Write a short comment describing this function.
-##  makeCacheMatrix 
-
+##    MakeCacheMatrix sets and gets the value of the matrix inverse
 makeCacheMatrix <- function(x = matrix()) {
   m <- NULL
   set <- function(y) {
@@ -26,9 +25,12 @@ makeCacheMatrix <- function(x = matrix()) {
 
 
 ## Write a short comment describing this function
-
+##    cacheSolve computes inverse of the matrix. 
+##    If the inverse has been calculated (and matrix unchanged) 
+##    then  retrieves the cached inverse and
+##    return a matrix that is the inverse of 'x'
 cacheSolve <- function(x, ...) {
-        ## Return a matrix that is the inverse of 'x'
+       
   m <- x$getmatinv()
   
   if(!is.null(m)) {     #inverse is cached
